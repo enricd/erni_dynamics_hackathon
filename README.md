@@ -11,4 +11,5 @@ We are using the picar-x kit, in this kit we have what is necessary to make a pr
 
 To achieve a satisfactory assembly we must follow the steps indicated in the previous images. You can modify the original parts if you want to optimize the vehicle, perhaps new wheels?
 
-![Wheels Joke](https://github.com/enricd/erni_dynamics_hackathon/blob/32b93b73da940efe23bfba2c57dab719010e7603/Documentation/IMG_1713.png =250x)
+<img src="https://github.com/enricd/erni_dynamics_hackathon/blob/32b93b73da940efe23bfba2c57dab719010e7603/Documentation/IMG_1713.png" width="250">
+
