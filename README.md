@@ -5,6 +5,9 @@ Hi! we are the **ERNI Dynamics** group, in this document we are going to explain
 
 # Hardware
 
-We are using the picar-x kit, in this kit we have what is necessary to make a vehicle and the possibility of programming it.
+We are using the picar-x kit, in this kit we have what is necessary to make a programable vehicle.
 ![Materials](https://github.com/enricd/erni_dynamics_hackathon/blob/6d5fc79c7afc406060e7dba13fa715742e2e5fe1/Documentation/materials-picar-x.png)
 ![Materials](https://github.com/enricd/erni_dynamics_hackathon/blob/6d5fc79c7afc406060e7dba13fa715742e2e5fe1/Documentation/materials2-picar-x.png)
+
+To achieve a satisfactory assembly we must follow the steps indicated in the previous images. You can modify the original parts if you want to optimize the vehicle, perhaps new wheels?
+![Wheels Joke](https://github.com/enricd/erni_dynamics_hackathon/blob/0fb606b789279b446b26a37715e3f5643ccd862b/Documentation/IMG_1713.HEIC)
