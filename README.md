@@ -13,3 +13,6 @@ To achieve a satisfactory assembly we must follow the steps indicated in the pre
 
 <img src="https://github.com/enricd/erni_dynamics_hackathon/blob/32b93b73da940efe23bfba2c57dab719010e7603/Documentation/IMG_1713.png" width="250">
 
+We decided to build our own bigger wheels, so our robot can be faster with the same motors. To implement them, we flipped the motor position, so the rear axis position is further away from the front wheels. This reduces the angle of the chasis, so front wheels have a good contact with the ground and the line sensor still have some clearance.
+
+<img src="https://github.com/enricd/erni_dynamics_hackathon/blob/main/Documentation/ErniDynamicsCar.png"  width="700">
