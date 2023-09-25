@@ -1,3 +1,29 @@
+# ![oneERNI Global Hackathon](https://www.events.erni/hackathon)
+
+## Challenge description 💻
+
+Three days to achieve the goal​  ⏳
+
+- Build and program a robot that is able to move through an obstacle course as fast as possible.​
+- Do that remote controlled over the internet by someone else from outside your office.​
+- Work with ERNI quality.​
+- Be visible and let others know about your project.
+- Team with most points wins. Maximum score is 20.000 points.​​
+
+### Usability 
+You might be good, but did you consider the users?
+
+Which robot performs best when operated remotely via internet?
+
+### Technology
+Tight timeframes are no excuse not to be excellent.
+
+Our tech jury will have a brief look at the requirements coverage and review your technical design. Can you impress them?
+
+### Beauty
+Can you win the hearts of the audience?
+
+Which robot gets the most votes from our heterogenic global audience?
 # Welcome to ERNI Dynamics!
 
 Hi! we are the **ERNI Dynamics** group, in this document we are going to explain step by step the process to do the set up, also we are going to explain how to build the hardware!
