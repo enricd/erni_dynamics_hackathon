@@ -1,69 +1,61 @@
-import numpy as np
-import cv2
-import threading
-
-#from importlib import import_module  # not used
+from flask import Flask, request, render_template_string
 import os
-from flask import Flask, render_template, Response  # refactor to fastapi
-from multiprocessing import Process, Manager
-import time
-
 
 app = Flask(__name__)
 
-camera = cv2.VideoCapture(0)
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        word = request.form.get('word', 'default')
+        print("rec:", word)
+        cmd1 = "cd /home/pi/picar-x/example/our_tests; python3 minecart_PRO.py"
+        #cmd1 = "cd /home/pi/picar-x/example/; python3 tts_example.py"
+        proc = os.system(cmd1)
+        print("proc:", proc)
 
 
-def gen_frames():  
-    while True:
-        success, frame = camera.read()  # read the camera frame
-        if not success:
-            break
-        else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
+    return render_template_string('''
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("https://i.postimg.cc/SxvN27h1/Screenshot-2023-09-24-at-19-42-11.png");
+            background-size: cover;
+            background-position: center;
+        }
 
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
 
-@app.route('/')
-def index():
-    return 'Hello world'
+        }
 
+        button {
+            margin-top: 10px;
+            width: 120px;
+            height: 50px;
+            font-size: 20px;
+        }
 
-# @app.route('/temp')
-# def index():
-#     return render_template('index.html')
+        img {
+            margin-top: -100px;
+            width: 100%;
+        }
+    </style>
+</head>
 
+<body>
+    <div class="container">
+        <form action="/" method="post">
+            <img src="https://2e136746ca9f.ngrok.app/video_feed" width="100%">
+            <button type="submit" name="word" value="Go!">Go!</button>
+        </form>
+    </div>
+</body>
+</html>
+''')
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
-
-def test_img():
-    camera = cv2.VideoCapture(0)
-
-    camera.set(3, 640)
-    camera.set(4, 480)
-
-    width = int(camera.get(3))
-    height = int(camera.get(4))
-
-    M = cv2.getRotationMatrix2D((width / 2, height / 2), 180, 1)
-    camera.set(cv2.CAP_PROP_BUFFERSIZE,1)
-    cv2.setUseOptimized(True)
-
-    _, img = camera.read()
-
-    print("img:")
-    print(type(img))
-    print(img.shape)
-
-    cv2.imwrite("img_test.png", img)
-    cv2.imwrite("img_test.jpg", img)
-
-
-
-if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(debug=True)
