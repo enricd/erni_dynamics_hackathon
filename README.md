@@ -1,4 +1,4 @@
-# ![oneERNI Global Hackathon](https://www.events.erni/hackathon)
+# [oneERNI Global Hackathon](https://www.events.erni/hackathon)
 
 ## Challenge description 💻
 
